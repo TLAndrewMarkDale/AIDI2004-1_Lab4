@@ -23,7 +23,7 @@ export function FishForm(event) {
     }
     const payload = Object.fromEntries(formData);
 
-    fetch("http://localhost:5000/predict", {
+    fetch("/predict", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
