@@ -3,9 +3,10 @@ from flask_cors import CORS, cross_origin
 import pickle
 import numpy as np
 import pandas as pd
+import os
 
 model = pickle.load(open('models/random_forest.pkl', 'rb'))
-app = Flask(__name__, static_folder='build', static_url_path='')
+app = Flask(__name__, static_folder='../build', static_url_path='')
 CORS(app)
 @app.route('/predict', methods=['POST'])
 @cross_origin()
@@ -24,4 +25,5 @@ def serve():
     return app.send_static_file(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
