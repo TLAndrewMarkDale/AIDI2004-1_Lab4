@@ -25,7 +25,7 @@ export function FishForm(event) {
     console.log(payload);
     fetch("/predict", {
       method: "POST",
-      body: JSON.stringify(payload),
+      body: JSON.parse(JSON.stringify(payload)),
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
