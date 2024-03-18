@@ -1,4 +1,5 @@
-# Lab 4 for AI in Enterprise Systems: Fish Classification Frontend and Backend
+# Lab 4 for AI in Enterprise Systems
+## Fish Classification Frontend and Backend
 
 **Andrew Mark Dale**
 
