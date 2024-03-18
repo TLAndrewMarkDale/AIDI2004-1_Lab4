@@ -22,7 +22,7 @@ export function FishForm(event) {
       return;
     }
     const payload = Object.fromEntries(formData);
-
+    console.log(payload);
     fetch("/predict", {
       method: "POST",
       body: JSON.stringify(payload),
