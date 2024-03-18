@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 
 model = pickle.load(open('models/random_forest.pkl', 'rb'))
-app = Flask(__name__, static_folder='/build', static_url_path='')
+app = Flask(__name__, static_folder='./build', static_url_path='')
 CORS(app)
 @app.route('/predict', methods=['POST'])
 @cross_origin()
