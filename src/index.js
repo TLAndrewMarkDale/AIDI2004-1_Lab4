@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import { FishForm } from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const fishform = ReactDOM.createRoot(document.getElementById('fishform'));
+fishform.render(
   <React.StrictMode>
-    <App />
+    <FishForm />
   </React.StrictMode>
 );
 
