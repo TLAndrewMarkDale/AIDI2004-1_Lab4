@@ -23,7 +23,7 @@ export function FishForm(event) {
     }
     const payload = Object.fromEntries(formData);
     console.log(payload);
-    fetch("https://lab4-fishclassifier-deada77e5960.herokuapp.com/predict", {
+    fetch("https://lab4-backend-74e2fa1b498c.herokuapp.com/predict", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
