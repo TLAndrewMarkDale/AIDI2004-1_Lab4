@@ -18,6 +18,8 @@ def predict():
     prediction = model.predict(data)
     return jsonify(prediction[0])
 
+@app.route('/')
+@cross_origin()
 def serve():
     return app.send_static_file(app.static_folder, 'index.html')
 
