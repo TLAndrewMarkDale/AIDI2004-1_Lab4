@@ -32,7 +32,7 @@ export function FishForm(event) {
       },
     })
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => setPrediction(data))
       .catch((error) => console.error(error));
   };
   const replaceNonNumeric = (value) => {
